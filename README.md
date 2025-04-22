@@ -34,6 +34,6 @@ Locate your asset ID# in block explorer and make note of the number. If not alre
 ![Importing ZEUS COMIC in MetaMask](https://github.com/user-attachments/assets/d9556d7c-0ca0-423c-8fb6-f28269465d6a)
 
 
-## 5. Future Project Development
-As the community around the project forms and continues to grow in anticipation for the launch of ZEUS Mail, we encourage education to onboard new people to experience the innovative solutions presented by blockchain networks and applications. Follow our social channels for updates on the project including our digital celestial art artifacts. 
+## 4. Joining the Hunt for The Missing Keys and Future Project Development
+As the community around the project continues to grow, join the community on Telegram <a href="https://t.me/+ahBGWbW09kxkYmI0" onclick="window.open('https://t.me/+ahBGWbW09kxkYmI0', '_blank', 'noopener,noreferrer'); return false;">Telegram</a> and Twitter where you can participate in the hunt to decipher the missing keys to 100,000 SATs hidden in the pages of the comic. We encourage education to onboard new people to experience the innovative solutions presented by blockchain networks and applications. Stay stuned for a follow up comic series and updates on the project including Zeus Mail and our digital celestial art artifacts.
 
