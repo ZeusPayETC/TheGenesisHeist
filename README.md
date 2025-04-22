@@ -2,7 +2,7 @@
 The Genesis Heist is the first in the Zeus Comic series following a group of Bitcoin engineers operating a facility in the lush valley of Cascadia, must solve the mystery of a heist from a remote planet. 
 ![The Genesis Heist Mint3 Complete Success](https://github.com/user-attachments/assets/2640117a-d86b-4a4c-806d-d8a0bf570072)
 <br>
-## 1. How to Use Zeus Encryption dApp
+## 1. How to Mint and Read The Genesis Heist Comic
 
 We introduce <a href="https://www.zeusencryption.app/" onclick="window.open('https://www.zeusencryption.app/', '_blank', 'noopener,noreferrer'); return false;">zeusencryption.app</a> our first decentralized application in the Zeus ecosystem with an AES/SHA-256 encryption program written in Solidity and deployed to Ethereum Classic blockchain. 
 As a Turing-complete EVM, you can interact with Ethereum Classic using MetaMask Wallet application to interface with the UI and operate the Zeus Encryption program.
