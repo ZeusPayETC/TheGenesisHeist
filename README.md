@@ -1,9 +1,6 @@
 # The Genesis Heist
 The Genesis Heist is the first in the Zeus Comic series following a group of Bitcoin engineers operating a facility in the lush valley of Cascadia, must solve the mystery of a heist from a remote planet. 
-
-# Zeus Encryption
-Zeus Encryption is the world's first AES/SHA-256 encryption application running on the decentralised smart contracts Ethereum Classic Network. Built with a combination of Solidity and Javascript/Html, the program accepts deposits of 10,000 ZEUS tokens in return for a passphrase protected encryption/decryption service on Ethereum Classic blockchain. 
-![Zeus Encryption Wallet Connected with QR - Copy](https://github.com/user-attachments/assets/a1eff94c-872f-4280-bbba-0714f97349dc)
+![The Genesis Heist Mint3 Complete Success](https://github.com/user-attachments/assets/2640117a-d86b-4a4c-806d-d8a0bf570072)
 <br>
 ## 1. How to Use Zeus Encryption dApp
 
