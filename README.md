@@ -30,10 +30,10 @@ Ethereum Classic blockchain which runs the ZEUS COMIC smart contract shares simi
 After your comic is successfully minted, you can inspect the asset on BlockScout ETC explorer <a href="https://etc.blockscout.com/token/0x26B24bE02620214995911a5123e964EF7A962a79?tab=inventory" onclick="window.open('https://etc.blockscout.com/token/0x26B24bE02620214995911a5123e964EF7A962a79?tab=inventory', '_blank', 'noopener,noreferrer'); return false;">Zeus Comic Inventory</a>
 - ZEUS COMIC Contract Address: ``0x26B24bE02620214995911a5123e964EF7A962a79``
 
-After acquiring ETC from your favorite CEX, head over to https://app.hebeswap.com and swap some ETC for ZEUS on the decentralised exchange.
-Remember to add the ZEUS token contract address in HebeSwap DeX and add to your token list.
+Locate your asset ID# in block explorer and make note of the number. If not already appeared click NFT tab in MetaMask and +Import NFT. Input the Zeus Comic contract address and your ID# to manually add the comic NFT asset to your wallet.
+![Importing ZEUS COMIC in MetaMask](https://github.com/user-attachments/assets/d9556d7c-0ca0-423c-8fb6-f28269465d6a)
 
-![HebeSwap Dex - Copy](https://github.com/user-attachments/assets/9e5f72f5-ee0c-4d4f-a492-1d7904db712f)
+
 
 ## 4. How to Run Zeus Encryption Program Locally on Your Machine
 You can run Zeus Encryption application locally on your machine using NodeJS and npm server instace with instructions below:
