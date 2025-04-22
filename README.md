@@ -27,7 +27,7 @@ Ethereum Classic blockchain which runs the ZEUS COMIC smart contract shares simi
 
 
 ## 3. Adding Your ZEUS COMIC NFT to Your MetaMask Wallet
-After your comic is successfully minted, you can inspect the asset on BlockScout ETC explorer <a href="[https://bit.ly/ZeusProject](https://etc.blockscout.com/token/0x26B24bE02620214995911a5123e964EF7A962a79?tab=inventory)" onclick="window.open('[https://bit.ly/ZeusProject](https://etc.blockscout.com/token/0x26B24bE02620214995911a5123e964EF7A962a79?tab=inventory)', '_blank', 'noopener,noreferrer'); return false;">Zeus Comic Inventory</a> .
+After your comic is successfully minted, you can inspect the asset on BlockScout ETC explorer <a href="https://etc.blockscout.com/token/0x26B24bE02620214995911a5123e964EF7A962a79?tab=inventory" onclick="window.open('https://etc.blockscout.com/token/0x26B24bE02620214995911a5123e964EF7A962a79?tab=inventory', '_blank', 'noopener,noreferrer'); return false;">Zeus Comic Inventory</a>
 - ZEUS COMIC Contract Address: ``0x26B24bE02620214995911a5123e964EF7A962a79``
 
 After acquiring ETC from your favorite CEX, head over to https://app.hebeswap.com and swap some ETC for ZEUS on the decentralised exchange.
