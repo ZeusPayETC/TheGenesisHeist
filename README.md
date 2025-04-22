@@ -26,9 +26,9 @@ Ethereum Classic blockchain which runs the ZEUS COMIC smart contract shares simi
 ![ETC Network Confugration - Copy](https://github.com/user-attachments/assets/76153773-167f-4437-bff6-2faceb8e709b)
 
 
-## 3. How to Acquire ZEUS to Operate Zeus Encryption Program
-ZEUS is an ERC-20 token running on the Ethereum Classic blockchain and can be swapped for underlying asset ETC.
-- ZEUS Contract Address: ``0x66e97838A985cf070B9F955c4025f1C7825de44F``
+## 3. Adding Your ZEUS COMIC NFT to Your MetaMask Wallet
+After your comic is successfully minted, you can inspect the asset on BlockScout ETC explorer <a href="[https://bit.ly/ZeusProject](https://etc.blockscout.com/token/0x26B24bE02620214995911a5123e964EF7A962a79?tab=inventory)" onclick="window.open('[https://bit.ly/ZeusProject](https://etc.blockscout.com/token/0x26B24bE02620214995911a5123e964EF7A962a79?tab=inventory)', '_blank', 'noopener,noreferrer'); return false;">Zeus Comic Inventory</a> .
+- ZEUS COMIC Contract Address: ``0x26B24bE02620214995911a5123e964EF7A962a79``
 
 After acquiring ETC from your favorite CEX, head over to https://app.hebeswap.com and swap some ETC for ZEUS on the decentralised exchange.
 Remember to add the ZEUS token contract address in HebeSwap DeX and add to your token list.
