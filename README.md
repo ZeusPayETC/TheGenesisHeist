@@ -31,7 +31,8 @@ After your comic is successfully minted, you can inspect the asset on BlockScout
 - ZEUS COMIC Contract Address: ``0x26B24bE02620214995911a5123e964EF7A962a79``
 
 Locate your asset ID# in block explorer and make note of the number. If not already appeared click NFT tab in MetaMask and +Import NFT. Input the Zeus Comic contract address and your ID# to manually add the comic NFT asset to your wallet.
-![Importing ZEUS COMIC in MetaMask](https://github.com/user-attachments/assets/d9556d7c-0ca0-423c-8fb6-f28269465d6a)
+![Importing ZEUS COMIC in MetaMask](https://github.com/user-attachments/assets/47afa0ca-80ca-4d90-9439-540820be4614)
+
 
 
 ## 4. Joining the Hunt for The Missing Keys and Future Project Development
