@@ -5,7 +5,7 @@ The Genesis Heist is the first in the Zeus Comic series following a group of Bit
 ## 1. How to Mint and Read The Genesis Heist Comic
 
 The Genesis Heist is an ERC-721 dApp built and deployed on Ethereum Classic blockchain using Solidity smart contracts and React programming language. 
-To interact with the program, ensure your MetaMask wallet is configured on Ethereum Classic. For those not familiar with this network configuration, a guide can be found in the section below. Fund your wallet with 1 ETC allowing for minting gas fees and proceed to mint your comic. Don't forget to follow the project on Twitter and Telegram to interact with community members also searching for clues to crack the secret code to the cipher.
+To interact with the program, we recommend using Brave browser for privacy and security, ensure your MetaMask wallet is configured on Ethereum Classic. For those not familiar with this network configuration, a guide can be found in the section below. Fund your wallet with 1 ETC allowing for minting gas fees and proceed to mint your comic. Don't forget to follow the project on Twitter and Telegram to interact with community members also searching for clues to crack the secret code to the cipher.
 ![Edit Network Choose Ethereum Classic](https://github.com/user-attachments/assets/b8f27c1d-526f-4953-8136-1abee982d637)
 
 
