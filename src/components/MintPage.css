@@ -1,0 +1,133 @@
+.mint-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+  }
+  
+  .wallet-connection {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  .status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 0 0 12px red;
+  }
+  
+  .status-dot.connected {
+    background-color: #00ff00;
+    box-shadow: 0 0 12px #00ff00;
+  }
+  
+  .status-dot.disconnected {
+    background-color: red;
+    box-shadow: 0 0 12px red;
+  }
+  
+  .connect-btn {
+    background-color: #007bff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .connect-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .mint-box {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #5b2a86;
+    padding: 1.5rem;
+    border-radius: 12px;
+    max-width: 350px;
+    text-align: left;
+  }
+  
+  .mint-stats {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mint-btn, .read-comic-btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .mint-btn {
+    background-color: #5b2a86;
+    color: white;
+  }
+
+  .mint-btn:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  .read-comic-btn {
+    background-color: #4CAF50;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .comic-display img {
+    width: 300px;
+    border: 3px solid white;
+    border-radius: 8px;
+  }
+  
+  .social-checks {
+    margin-top: 1rem;
+  }
+  
+  .social-checks label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+    }
+    70% {
+      transform: scale(1.2);
+      box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+    }
+  }
+  
+  .status-dot.connected {
+    background-color: #00ff00;
+    box-shadow: 0 0 12px #00ff00;
+    animation: pulse 1.5s infinite;
+  }
+    
