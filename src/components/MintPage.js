@@ -623,6 +623,9 @@ const contractABI = [{
 }];
 const contractAddress = '0x26B24bE02620214995911a5123e964EF7A962a79';
 
+// PUBLIC RPC (read-only, no wallet needed)
+const readOnlyProvider = new ethers.JsonRpcProvider('https://etc.etcdesktop.com'); // Replace if needed
+
 const MintPage = () => {
   const [soldOut, setSoldOut] = useState(false);
   const [account, setAccount] = useState(null);
@@ -637,10 +640,26 @@ const MintPage = () => {
   const backgroundUrl = 'https://loud-chocolate-cattle.myfilebase.com/ipfs/QmR5b1whp3Vdxz87JaVNuBvcSC7PJcCvdH5hZjRRutFA62';
   const comicCover = 'https://loud-chocolate-cattle.myfilebase.com/ipfs/QmWy2Mv16CDiXcFJnTxqLWfdEbgKf7bVC54pcKP7HpkgV9/0.png';
 
+  // Load basic status (before wallet connection)
   useEffect(() => {
-    if (!window.ethereum) {
-      toast.error('MetaMask not detected');
-    }
+    const fetchStatus = async () => {
+      try {
+        const readOnlyContract = new ethers.Contract(contractAddress, contractABI, readOnlyProvider);
+        const [price, total, max] = await Promise.all([
+          readOnlyContract.mintPrice(),
+          readOnlyContract.totalSupply(),
+          readOnlyContract.maxSupply(),
+        ]);
+        setMintPrice(ethers.formatEther(price));
+        setTotalSupply(Number(total));
+        setMaxSupply(Number(max));
+        setSoldOut(Number(total) >= Number(max));
+      } catch (err) {
+        console.error('Error fetching public mint status:', err);
+      }
+    };
+
+    fetchStatus();
   }, []);
 
   const connectWallet = async () => {
@@ -656,18 +675,8 @@ const MintPage = () => {
         const connectedContract = new ethers.Contract(contractAddress, contractABI, signer);
         setContract(connectedContract);
 
-        const [price, total, max, balance] = await Promise.all([
-          connectedContract.mintPrice(),
-          connectedContract.totalSupply(),
-          connectedContract.maxSupply(),
-          connectedContract.balanceOf(userAddress),
-        ]);
-
-        setMintPrice(ethers.formatEther(price));
-        setTotalSupply(Number(total));
-        setMaxSupply(Number(max));
+        const balance = await connectedContract.balanceOf(userAddress);
         setIsOwner(balance > 0n);
-        setSoldOut(Number(total) >= Number(max));
       } catch (err) {
         console.error('Wallet connection error:', err);
         toast.error('Wallet connection failed');
@@ -696,6 +705,7 @@ const MintPage = () => {
         await tx.wait();
         const updatedSupply = await contract.totalSupply();
         setTotalSupply(Number(updatedSupply));
+        setSoldOut(Number(updatedSupply) >= maxSupply);
         setMintSuccess(true);
         checkOwnership(account);
         toast.success('Mint successful! 🎉');
@@ -728,7 +738,6 @@ const MintPage = () => {
           position: 'relative',
         }}
       >
-        {/* Wallet UI */}
         <div className="wallet-connection">
           <span
             className={`status-dot ${account ? 'connected' : 'disconnected'}`}
@@ -739,7 +748,6 @@ const MintPage = () => {
           </button>
         </div>
 
-        {/* Mint Box */}
         <div className="mint-box">
           <div className="mint-stats">
             <span>Total Minted:</span>
@@ -748,12 +756,12 @@ const MintPage = () => {
 
           {account && (
             <>
-            <button
-                 className="mint-btn"
-                 onClick={mintNFT}
-                 disabled={minting || soldOut}
+              <button
+                className="mint-btn"
+                onClick={mintNFT}
+                disabled={minting || soldOut}
               >
-                 {soldOut ? 'Sold Out' : minting ? 'Minting...' : `Mint for ${mintPrice} ETC`}
+                {soldOut ? 'Sold Out' : minting ? 'Minting...' : `Mint for ${mintPrice} ETC`}
               </button>
 
               {isOwner && (
@@ -795,10 +803,9 @@ const MintPage = () => {
         </div>
       </div>
 
-      {/* Toast Notification Container */}
       <ToastContainer position="bottom-right" autoClose={4000} theme="dark" />
     </>
   );
 };
 
-export default MintPage;  
+export default MintPage;
