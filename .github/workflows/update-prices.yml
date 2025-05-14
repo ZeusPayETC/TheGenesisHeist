@@ -24,7 +24,6 @@ jobs:
             "label": "BTC",
             "message": "'"\$${BTC}"'",
             "color": "orange",
-            "logo": "bitcoin"
           }' > badges/btc-badge.json
 
           echo '{
@@ -32,7 +31,6 @@ jobs:
             "label": "ETC",
             "message": "'"\$${ETC}"'",
             "color": "green",
-            "logo": "ethereum"
           }' > badges/etc-badge.json
 
       - name: Commit Changes
