@@ -4,13 +4,3 @@
    "message": "\1938{BTC}",
    "color": "orange",
  }
- EOF
-
-cat > badges/etc-badge.json <<EOF
-{
-  "schemaVersion": 1,
-  "label": "ETC",
-  "message": "\1938{ETC}",
-  "color": "green",
-  "logo": "ethereum"
-}
