@@ -19,25 +19,21 @@ jobs:
           BTC=$(curl -s https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd | jq -r '.bitcoin.usd')
           ETC=$(curl -s https://api.coingecko.com/api/v3/simple/price?ids=ethereum-classic&vs_currencies=usd | jq -r '.["ethereum-classic"].usd')
 
-          cat <<EOF > badges/btc-badge.json
-{
-  "schemaVersion": 1,
-  "label": "BTC",
-  "message": "\\$${BTC}",
-  "color": "orange",
-  "logo": "bitcoin"
-}
-EOF
+          echo '{
+            "schemaVersion": 1,
+            "label": "BTC",
+            "message": "'"\$${BTC}"'",
+            "color": "orange",
+            "logo": "bitcoin"
+          }' > badges/btc-badge.json
 
-          cat <<EOF > badges/etc-badge.json
-{
-  "schemaVersion": 1,
-  "label": "ETC",
-  "message": "\\$${ETC}",
-  "color": "green",
-  "logo": "ethereum"
-}
-EOF
+          echo '{
+            "schemaVersion": 1,
+            "label": "ETC",
+            "message": "'"\$${ETC}"'",
+            "color": "green",
+            "logo": "ethereum"
+          }' > badges/etc-badge.json
 
       - name: Commit Changes
         run: |
