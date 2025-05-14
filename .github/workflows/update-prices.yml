@@ -16,7 +16,7 @@ jobs:
         run: |
           mkdir -p badges
 
-          BTC=$(curl -v "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+          BTC=$(curl -v "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd") | jq -r '.["bitcoin"].usd')
           ETC=$(curl -s https://api.coingecko.com/api/v3/simple/price?ids=ethereum-classic&vs_currencies=usd | jq -r '.["ethereum-classic"].usd')
 
           echo '{
