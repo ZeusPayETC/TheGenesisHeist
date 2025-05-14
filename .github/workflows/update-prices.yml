@@ -24,8 +24,7 @@ jobs:
             "schemaVersion": 1,
             "label": "BTC",
             "message": "\\$${BTC}",
-            "color": "orange",
-            "logo": "bitcoin"
+            "color": "orange"
           }
           EOF
 
