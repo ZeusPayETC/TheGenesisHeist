@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "BTC",
-  "message": "$",
+  "message": "${"bitcoin":{"usd":103325}}",
   "color": "orange",
 }
