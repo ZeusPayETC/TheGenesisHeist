@@ -1,7 +1,7 @@
  {
    "schemaVersion": 1,
    "label": "BTC",
-   "message": "\1934{BTC}",
+   "message": "\2046{BTC}",
    "color": "orange",
  }
  EOF
@@ -10,7 +10,7 @@ cat > badges/etc-badge.json <<EOF
 {
   "schemaVersion": 1,
   "label": "ETC",
-  "message": "\1934{ETC}",
+  "message": "\2046{ETC}",
   "color": "green",
   "logo": "ethereum"
 }
