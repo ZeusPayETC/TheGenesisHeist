@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "label": "ETC",
-  "message": "\1939{ETC}",
+  "message": "${"error":"Missing parameter vs_currencies"}",
   "color": "green",
   "logo": "ethereum"
 }
