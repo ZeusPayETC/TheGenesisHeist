@@ -19,7 +19,7 @@ jobs:
           BTC=$(curl -s https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd | jq -r '.bitcoin.usd')
           ETC=$(curl -s https://api.coingecko.com/api/v3/simple/price?ids=ethereum-classic&vs_currencies=usd | jq -r '.["ethereum-classic"].usd')
 
-          cat > badges/btc-badge.json <<EOF
+          cat <<EOF > badges/btc-badge.json
 {
   "schemaVersion": 1,
   "label": "BTC",
@@ -29,7 +29,7 @@ jobs:
 }
 EOF
 
-          cat > badges/etc-badge.json <<EOF
+          cat <<EOF > badges/etc-badge.json
 {
   "schemaVersion": 1,
   "label": "ETC",
