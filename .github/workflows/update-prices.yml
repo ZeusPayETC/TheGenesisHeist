@@ -23,8 +23,8 @@ jobs:
           {
             "schemaVersion": 1,
             "label": "BTC",
-            "message": "\\$${BTC}",
-            "color": "orange"
+            "message": "$63,000",
+            "color": "orange",
           }
           EOF
 
