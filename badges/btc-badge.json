@@ -1,7 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "BTC",
-  "message": "${"error":"Missing parameter vs_currencies"}",
+  "message": "\\$${BTC}",
   "color": "orange",
-  "logo": "bitcoin"
 }
