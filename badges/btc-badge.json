@@ -1,7 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "BTC",
-  "message": "Loading...",
-  "color": "orange",
-  "logo": "bitcoin"
+  "message": "$63,000",
+  "color": "orange"
 }
