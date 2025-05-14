@@ -3,5 +3,4 @@
   "label": "ETC",
   "message": "${"error":"Missing parameter vs_currencies"}",
   "color": "green",
-  "logo": "ethereum"
 }
