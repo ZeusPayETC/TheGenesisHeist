@@ -28,16 +28,6 @@ jobs:
            }
            EOF
 
-          cat > badges/etc-badge.json <<EOF
-          {
-            "schemaVersion": 1,
-            "label": "ETC",
-            "message": "\\$${ETC}",
-            "color": "green",
-            "logo": "ethereum"
-          }
-          EOF
-
       - name: Commit Changes
         run: |
           git config user.name "github-actions"
