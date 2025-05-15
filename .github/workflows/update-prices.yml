@@ -1,42 +1,20 @@
-name: Update Crypto Prices
+- name: Fetch Prices and Update Badge
+  run: |
+    mkdir -p badges
 
-on:
-  schedule:
-    - cron: "*/15 * * * *"
-  workflow_dispatch:
+    BTC=$(curl -s "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd" | jq -r '.bitcoin.usd')
+    ETC=$(curl -s "https://api.coingecko.com/api/v3/simple/price?ids=ethereum-classic&vs_currencies=usd" | jq -r '.["ethereum-classic"].usd')
 
-jobs:
-  fetch-prices:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
+    echo '{
+      "schemaVersion": 1,
+      "label": "BTC",
+      "message": "'"${BTC} USD"'",
+      "color": "orange"
+    }' > badges/btc-badge.json
 
-      - name: Fetch Prices and Update Badge
-        run: |
-          mkdir -p badges
-
-          BTC=$(curl -s "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd" | jq -r '.bitcoin.usd')
-          ETC=$(curl -s https://api.coingecko.com/api/v3/simple/price?ids=ethereum-classic&vs_currencies=usd | jq -r '.["ethereum-classic"].usd')
-
-          echo '{
-            "schemaVersion": 1,
-            "label": "BTC",
-            "message": "'"\$${BTC}"'",
-            "color": "orange",
-          }' > badges/btc-badge.json
-
-          echo '{
-            "schemaVersion": 1,
-            "label": "ETC",
-            "message": "'"\$${ETC}"'",
-            "color": "green",
-          }' > badges/etc-badge.json
-
-      - name: Commit Changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add badges/btc-badge.json badges/etc-badge.json
-          git commit -m "Update crypto price badges" || echo "No changes"
-          git push
+    echo '{
+      "schemaVersion": 1,
+      "label": "ETC",
+      "message": "'"${ETC} USD"'",
+      "color": "green"
+    }' > badges/etc-badge.json
