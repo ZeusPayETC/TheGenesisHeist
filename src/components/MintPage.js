@@ -1,3 +1,4 @@
+import SEO from './SEO';
 import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import CountUp from 'react-countup';
@@ -623,8 +624,8 @@ const contractABI = [{
 }];
 const contractAddress = '0x26B24bE02620214995911a5123e964EF7A962a79';
 
-// PUBLIC RPC (read-only, no wallet needed)
-const readOnlyProvider = new ethers.JsonRpcProvider('https://etc.etcdesktop.com'); // Replace if needed
+// PUBLIC RPC (read-only)
+const readOnlyProvider = new ethers.JsonRpcProvider('https://etc.etcdesktop.com');
 
 const MintPage = () => {
   const [soldOut, setSoldOut] = useState(false);
@@ -640,7 +641,7 @@ const MintPage = () => {
   const backgroundUrl = 'https://loud-chocolate-cattle.myfilebase.com/ipfs/QmR5b1whp3Vdxz87JaVNuBvcSC7PJcCvdH5hZjRRutFA62';
   const comicCover = 'https://loud-chocolate-cattle.myfilebase.com/ipfs/QmWy2Mv16CDiXcFJnTxqLWfdEbgKf7bVC54pcKP7HpkgV9/0.png';
 
-  // Load basic status (before wallet connection)
+  // Fetch supply info before wallet connection
   useEffect(() => {
     const fetchStatus = async () => {
       try {
@@ -698,6 +699,12 @@ const MintPage = () => {
   };
 
   const mintNFT = async () => {
+    if (!account) {
+      toast.info('Please connect your wallet first');
+      await connectWallet();
+      return;
+    }
+
     if (contract && account) {
       try {
         setMinting(true);
@@ -726,6 +733,7 @@ const MintPage = () => {
 
   return (
     <>
+    <SEO />
       <div
         className="mint-container"
         style={{
@@ -754,30 +762,26 @@ const MintPage = () => {
             <CountUp end={totalSupply} duration={2} /> / {maxSupply}
           </div>
 
-          {account && (
-            <>
-              <button
-                className="mint-btn"
-                onClick={mintNFT}
-                disabled={minting || soldOut}
-              >
-                {soldOut ? 'Sold Out' : minting ? 'Minting...' : `Mint for ${mintPrice} ETC`}
-              </button>
+          <button
+            className="mint-btn"
+            onClick={mintNFT}
+            disabled={minting || soldOut}
+          >
+            {soldOut ? 'Sold Out' : minting ? 'Minting...' : `Mint for ${mintPrice} ETC`}
+          </button>
 
-              {isOwner && (
-                <>
-                  <a
-                    className="read-comic-btn"
-                    href="/reader"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    📖 Read Comic Book
-                  </a>
-                  {!mintSuccess && (
-                    <p className="ownership-message">You already own this comic book NFT.</p>
-                  )}
-                </>
+          {account && isOwner && (
+            <>
+              <a
+                className="read-comic-btn"
+                href="/reader"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📖 Read Comic Book
+              </a>
+              {!mintSuccess && (
+                <p className="ownership-message">You already own this comic book NFT.</p>
               )}
             </>
           )}
